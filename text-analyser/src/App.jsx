@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MdDescription, MdAutoAwesome } from 'react-icons/md';
+import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import FileUpload from './components/FileUpload';
 import RulesForm from './components/RulesForm';
 import ResultsPanel from './components/ResultsPanel';
@@ -220,9 +221,52 @@ function App() {
       {/* Footer */}
       <footer className="mt-12 py-6 border-t border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm text-gray-600">
-            DocFormat Inspector • Built with React & Tailwind CSS • {new Date().getFullYear()}
-          </p>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            {/* Copyright */}
+            <p className="text-sm text-gray-600">
+              DocFormat Inspector • Built with React & Tailwind CSS • {new Date().getFullYear()}
+            </p>
+            
+            {/* Developer Credit */}
+            <div className="flex flex-col items-center md:items-end gap-2">
+              <p className="text-sm font-semibold text-gray-700">
+                Developed by <span className="text-primary-600">Nitesh Sharma</span>
+              </p>
+              
+              {/* Social Links */}
+              <div className="flex items-center space-x-4">
+                <a
+                  href="https://www.linkedin.com/in/nitesh-sharma-5b4115306?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-blue-600 transition-colors transform hover:scale-110"
+                  aria-label="LinkedIn Profile"
+                >
+                  <FaLinkedin className="text-2xl" />
+                </a>
+                
+                <a
+                  href="https://www.instagram.com/nitesh_bhardwaj0001?igsh=ejc3NjBvZGU1ZTBr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-pink-600 transition-colors transform hover:scale-110"
+                  aria-label="Instagram Profile"
+                >
+                  <FaInstagram className="text-2xl" />
+                </a>
+                
+                <a
+                  href="https://github.com/NITESHBHARDWAJ001"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-gray-900 transition-colors transform hover:scale-110"
+                  aria-label="GitHub Profile"
+                >
+                  <FaGithub className="text-2xl" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
